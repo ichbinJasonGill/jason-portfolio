@@ -1,20 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Jason Gill | Portfolio</title>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
+
 <body class="bg-gray-100 text-gray-900 relative">
 
   <!-- Navbar -->
-  <header class="bg-white shadow sticky top-0 z-50">
-    <div class="container mx-auto px-4 py-4 flex justify-between items-center">
-      <h1 class="text-2xl font-bold text-blue-700">Jason Gill</h1>
+  <!-- <header class="bg-white shadow sticky top-0 z-50"> -->
+  <!-- <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+      <h1 class="text-2xl font-bold text-blue-700">Jason Gill</h1> -->
 
-      <!-- Mobile menu button -->
-      <div class="md:hidden">
+  <!-- Mobile menu button -->
+  <!-- <div class="md:hidden">
         <button id="menu-toggle" class="text-gray-700 focus:outline-none">
           <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2"
                viewBox="0 0 24 24">
@@ -22,32 +24,23 @@
                   d="M4 6h16M4 12h16M4 18h16" />
           </svg>
         </button>
-      </div>
+      </div> -->
 
-      <!-- Desktop Navbar Links -->
-      <nav class="hidden md:flex space-x-6">
+  <!-- Desktop Navbar Links -->
+  <!-- <nav class="hidden md:flex space-x-6">
         <a href="#" class="hover:text-blue-600">Home</a>
         <a href="projects.html" class="hover:text-blue-600">Projects</a>
         <a href="about.html" class="hover:text-blue-600">About</a>
         <a href="contact.html" class="hover:text-blue-600">Contact</a>
       </nav>
-    </div>
-  </header>
+    </div> -->
+  <!-- </header> -->
 
-  <!-- Mobile Sidebar -->
-  <div id="sidebar" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden">
-    <div class="w-64 bg-white h-full shadow-lg p-6 absolute right-0 animate-slide-in-right">
-      <button id="close-sidebar" class="absolute top-4 right-4 text-gray-600">
-        ✕
-      </button>
-      <nav class="flex flex-col space-y-4 mt-8 text-lg font-medium">
-        <a href="#" class="hover:text-blue-600">Home</a>
-        <a href="projects.html" class="hover:text-blue-600">Projects</a>
-        <a href="about.html" class="hover:text-blue-600">About</a>
-        <a href="contact.html" class="hover:text-blue-600">Contact</a>
-      </nav>
-    </div>
-  </div>
+
+  <div id="navbar"></div>
+
+
+
 
   <!-- Hero Section -->
   <section class="text-center py-16 px-4 bg-gradient-to-b from-blue-100 to-white">
@@ -66,14 +59,16 @@
         <!-- Project 1 -->
         <div class="bg-gray-50 shadow rounded-lg p-6">
           <h4 class="text-xl font-bold mb-2">Micro GPS + GSM Tracker</h4>
-          <p class="text-gray-700 mb-4">A wallet-sized real-time tracker that sends live location via SMS or HTTP. Built with microcontrollers, GPS modules, and cellular SIM integration.</p>
+          <p class="text-gray-700 mb-4">A wallet-sized real-time tracker that sends live location via SMS or HTTP. Built
+            with microcontrollers, GPS modules, and cellular SIM integration.</p>
           <a href="#" class="text-blue-600 hover:underline">View Project →</a>
         </div>
 
         <!-- Project 2 -->
         <div class="bg-gray-50 shadow rounded-lg p-6">
           <h4 class="text-xl font-bold mb-2">JasonScript Interpreter</h4>
-          <p class="text-gray-700 mb-4">A scripting language interpreter built as a semester project. Inspired by ZabtaLang, written in C# with parsing, lexing, and execution features.</p>
+          <p class="text-gray-700 mb-4">A scripting language interpreter built as a semester project. Inspired by
+            ZabtaLang, written in C# with parsing, lexing, and execution features.</p>
           <a href="#" class="text-blue-600 hover:underline">View Project →</a>
         </div>
 
@@ -93,52 +88,48 @@
     </div>
   </footer>
 
-  <!-- Sidebar Animation Styles -->
-  <style>
-    @keyframes slide-in-right {
-      from { transform: translateX(100%); }
-      to { transform: translateX(0); }
-    }
-  
-    .animate-slide-in-right {
-      animation: slide-in-right 0.3s ease-out forwards;
-    }
-  </style>
+
+
+
   
 
-  <!-- JS for Sidebar -->
-  <script>
-    const toggleBtn = document.getElementById('menu-toggle');
-    const sidebar = document.getElementById('sidebar');
-    const closeBtn = document.getElementById('close-sidebar');
 
-    toggleBtn.addEventListener('click', () => {
-      sidebar.classList.remove('hidden');
-    });
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    fetch('navbar.html')
+      .then(res => res.text())
+      .then(html => {
+        document.getElementById('navbar').innerHTML = html;
 
-    closeBtn.addEventListener('click', () => {
-      sidebar.classList.add('hidden');
-    });
+        // Now the navbar is injected, attach event listeners
+        const toggleBtn = document.getElementById('menu-toggle');
+        const sidebar = document.getElementById('sidebar');
+        const closeBtn = document.getElementById('close-sidebar');
 
-    sidebar.addEventListener('click', (e) => {
-      if (e.target === sidebar) sidebar.classList.add('hidden');
-    });
-  </script>
+        if (toggleBtn && sidebar && closeBtn) {
+          toggleBtn.addEventListener('click', () => {
+            sidebar.classList.remove('hidden');
+          });
 
-  <style>
-  @keyframes slide-in-right {
-    from { transform: translateX(100%); }
-    to { transform: translateX(0); }
-  }
+          closeBtn.addEventListener('click', () => {
+            sidebar.classList.add('hidden');
+          });
 
-  .animate-slide-in-right {
-    animation: slide-in-right 0.3s ease-out forwards;
-  }
-</style>
+          sidebar.addEventListener('click', (e) => {
+            if (e.target === sidebar) sidebar.classList.add('hidden');
+          });
+        }
+      });
+  });
+</script>
+
+
 
 
 </body>
+
 </html>
 
 
 <!-- helloooo baby doll   -->
+<!-- tseting branch -->
