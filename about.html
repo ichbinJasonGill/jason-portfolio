@@ -92,15 +92,34 @@
   </footer>
 
   <!-- Navbar Loader -->
-  <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      fetch("navbar.html")
-        .then(res => res.text())
-        .then(html => {
-          document.getElementById("navbar").innerHTML = html;
-        });
-    });
-  </script>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    fetch('navbar.html')
+      .then(res => res.text())
+      .then(html => {
+        document.getElementById('navbar').innerHTML = html;
+
+        // Now the navbar is injected, attach event listeners
+        const toggleBtn = document.getElementById('menu-toggle');
+        const sidebar = document.getElementById('sidebar');
+        const closeBtn = document.getElementById('close-sidebar');
+
+        if (toggleBtn && sidebar && closeBtn) {
+          toggleBtn.addEventListener('click', () => {
+            sidebar.classList.remove('hidden');
+          });
+
+          closeBtn.addEventListener('click', () => {
+            sidebar.classList.add('hidden');
+          });
+
+          sidebar.addEventListener('click', (e) => {
+            if (e.target === sidebar) sidebar.classList.add('hidden');
+          });
+        }
+      });
+  });
+</script>
 
 </body>
 </html>
