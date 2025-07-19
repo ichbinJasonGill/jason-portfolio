@@ -1,125 +1,156 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>About | Jason Gill</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <style>
-    @keyframes fadeInUp {
-      from {
-        opacity: 0;
-        transform: translateY(20px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-    .animate-fadeInUp {
-      animation: fadeInUp 0.6s ease-out both;
-    }
-  </style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About | Jason Gill</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate-fadeInUp {
+            animation: fadeInUp 0.6s ease-out both;
+        }
+    </style>
 </head>
+
 <body class="bg-gray-100 text-gray-800">
 
-  <!-- Navbar Include -->
-  <div id="navbar"></div>
+    <!-- Navbar Include -->
+    <div id="navbar"></div>
 
-  <!-- About Section -->
-  <section class="py-16 px-6 max-w-6xl mx-auto">
-    <div class="grid md:grid-cols-10 gap-12 items-center animate-fadeInUp">
+    <!-- About Section -->
+    <section class="py-16 px-6 max-w-6xl mx-auto">
+        <div class="grid md:grid-cols-10 gap-12 items-center animate-fadeInUp">
 
-      <!-- Profile Image -->
-      <div class="md:col-span-3 flex justify-center">
-        <img src="assets/profile.jpg" alt="Jason Gill" class="w-64 h-64 rounded-full shadow-lg object-cover" />
-      </div>
+            <!-- Profile Image -->
+            <div class="md:col-span-3 flex justify-center">
+                <img src="assets/profile.jpg" alt="Jason Gill" class="w-64 h-64 rounded-full shadow-lg object-cover" />
+            </div>
 
-      <!-- Intro Text -->
-      <div class="md:col-span-7">
-        <h1 class="text-4xl font-bold text-blue-700 mb-4">About Me</h1>
-        <p class="text-lg mb-4">
-          I'm a Computer Science student passionate about building scalable systems and writing clean, maintainable code. I enjoy working on real-world projects — from full-stack web apps to embedded IoT devices.
-        </p>
-        <p class="text-lg mb-4">
-          My main interests lie in .NET MVC development, Firebase/Supabase integration, and microcontroller-based solutions using ESP32. I’m a strong believer in learning through building, and I constantly explore new tools and technologies to sharpen my craft.
-        </p>
-        <p class="text-lg mb-4">
-          Beyond code, I enjoy exploring history and faith-based initiatives. One of my goals is to create a meaningful digital platform for the Catholic community — a space to connect, share, and grow together.
-        </p>
-        <blockquote class="italic border-l-4 border-blue-500 pl-4 text-gray-600">
-          “Build systems that matter.”
-        </blockquote>
-        <p class="text-lg mt-4">
-          I'm always looking forward to learning from experienced developers, contributing to collaborative projects, and growing as both an engineer and a person.
-        </p>
-        <div class="mt-6">
-          <a href="assets/Jason_Gill_Resume.pdf" download
-             class="inline-block bg-blue-600 text-white px-5 py-3 rounded hover:bg-blue-700 transition">
-            Download My Resume
-          </a>
+            <!-- Intro Text -->
+            <div class="md:col-span-7">
+                <h1 class="text-4xl font-bold text-blue-700 mb-4">About Me</h1>
+                <p class="text-lg mb-4">
+                    I'm a Computer Science student passionate about building scalable systems and writing clean,
+                    maintainable code. I enjoy working on real-world projects — from full-stack web apps to embedded IoT
+                    devices.
+                </p>
+                <p class="text-lg mb-4">
+                    My main interests lie in .NET MVC development, Firebase/Supabase integration, and
+                    microcontroller-based solutions using ESP32. I’m a strong believer in learning through building, and
+                    I constantly explore new tools and technologies to sharpen my craft.
+                </p>
+                <p class="text-lg mb-4">
+                    Beyond code, I enjoy exploring history and faith-based initiatives. One of my goals is to create a
+                    meaningful digital platform for the Catholic community — a space to connect, share, and grow
+                    together.
+                </p>
+                <blockquote class="italic border-l-4 border-blue-500 pl-4 text-gray-600">
+                    “Build systems that matter.”
+                </blockquote>
+                <p class="text-lg mt-4">
+                    I'm always looking forward to learning from experienced developers, contributing to collaborative
+                    projects, and growing as both an engineer and a person.
+                </p>
+                <div class="mt-6">
+                    <a href="assets/Jason_Gill_CV.pdf" download
+                        class="inline-block bg-blue-600 text-white px-5 py-3 rounded hover:bg-blue-700 transition">
+                        Download My Resume
+                    </a>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Timeline Section -->
-  <section class="py-16 px-6 max-w-4xl mx-auto animate-fadeInUp">
-    <h2 class="text-3xl font-bold text-blue-700 text-center mb-12">My Journey</h2>
-    <div class="relative border-l-4 border-blue-600 pl-6 space-y-8">
-      <div>
-        <h3 class="text-xl font-semibold text-blue-800">2021 – Started CS Degree</h3>
-        <p class="text-gray-700">Began my journey at COMSATS University, diving into programming, logic, and foundational computer science.</p>
-      </div>
-      <div>
-        <h3 class="text-xl font-semibold text-blue-800">2023 – Built First Full-Stack Web App</h3>
-        <p class="text-gray-700">Created a student-teacher portal using .NET MVC and Firebase, complete with admin approval system.</p>
-      </div>
-      <div>
-        <h3 class="text-xl font-semibold text-blue-800">2024 – Developed JasonScript</h3>
-        <p class="text-gray-700">Created my own scripting language with interpreter functionality as a semester project.</p>
-      </div>
-      <div>
-        <h3 class="text-xl font-semibold text-blue-800">2025 – Portfolio + Live Projects</h3>
-        <p class="text-gray-700">Launched my personal portfolio and actively working on real-world tools using Git, Supabase, and microcontrollers.</p>
-      </div>
-    </div>
-  </section>
+    <!-- Timeline Section -->
+    <section class="py-16 px-6 max-w-4xl mx-auto animate-fadeInUp">
+        <h2 class="text-3xl font-bold text-blue-700 text-center mb-12">My Journey</h2>
+        <div class="relative border-l-4 border-blue-600 pl-10 space-y-10">
 
-  <!-- Footer -->
-  <footer class="bg-blue-900 text-white text-center py-6 mt-12">
-    © 2025 Jason Gill. All rights reserved.
-  </footer>
+            <!-- Timeline Item 1 -->
+            <div class="relative hover:bg-blue-50 p-4 rounded transition duration-300">
+                <div style="left: -3.1rem" class="absolute -left-3.5 top-12 w-4 h-4 bg-blue-600 rounded-full border-2 border-white shadow-md">
+                </div>
+                <div class="flex items-center gap-2 mb-1">
+                    <span class="inline-block bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full">2021</span>
+                    <span class="text-blue-600">🎓</span>
+                </div>
+                <h3 class="text-xl font-semibold text-blue-800">Started CS Degree</h3>
+                <p class="text-gray-700">Began my journey at COMSATS University, diving into programming, logic, and
+                    foundational computer science.</p>
+            </div>
 
-  <!-- Navbar Loader -->
-<script>
-  document.addEventListener("DOMContentLoaded", () => {
-    fetch('navbar.html')
-      .then(res => res.text())
-      .then(html => {
-        document.getElementById('navbar').innerHTML = html;
+            <!-- Timeline Item 2 -->
+            <div class="relative hover:bg-blue-50 p-4 rounded transition duration-300">
+                <div style="left: -3.1rem" class="absolute -left-3.5 top-12 w-4 h-4 bg-blue-600 rounded-full border-2 border-white shadow-md">
+                </div>
+                <div class="flex items-center gap-2 mb-1">
+                    <span class="inline-block bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full">2023</span>
+                    <span class="text-blue-600">💻</span>
+                </div>
+                <h3 class="text-xl font-semibold text-blue-800">Built First Full-Stack Web App</h3>
+                <p class="text-gray-700">Created a student-teacher portal using .NET MVC and Firebase, complete with
+                    admin approval system.</p>
+            </div>
 
-        // Now the navbar is injected, attach event listeners
-        const toggleBtn = document.getElementById('menu-toggle');
-        const sidebar = document.getElementById('sidebar');
-        const closeBtn = document.getElementById('close-sidebar');
+            <!-- Timeline Item 3 -->
+            <div class="relative hover:bg-blue-50 p-4 rounded transition duration-300">
+                <div style="left: -3.1rem" class="absolute -left-3.5 top-12 w-4 h-4 bg-blue-600 rounded-full border-2 border-white shadow-md">
+                </div>
+                <div class="flex items-center gap-2 mb-1">
+                    <span class="inline-block bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full">2024</span>
+                    <span class="text-blue-600">🧠</span>
+                </div>
+                <h3 class="text-xl font-semibold text-blue-800">Developed JasonScript</h3>
+                <p class="text-gray-700">Created my own scripting language with interpreter functionality as a semester
+                    project.</p>
+            </div>
 
-        if (toggleBtn && sidebar && closeBtn) {
-          toggleBtn.addEventListener('click', () => {
-            sidebar.classList.remove('hidden');
-          });
+            <!-- Timeline Item 4 -->
+            <div class="relative hover:bg-blue-50 p-4 rounded transition duration-300">
+                <div style="left: -3.1rem" class="absolute -left-3.5 top-12 w-4 h-4 bg-blue-600 rounded-full border-2 border-white shadow-md">
+                </div>
+                <div class="flex items-center gap-2 mb-1">
+                    <span class="inline-block bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full">2025</span>
+                    <span class="text-blue-600">🚀</span>
+                </div>
+                <h3 class="text-xl font-semibold text-blue-800">Portfolio + Live Projects</h3>
+                <p class="text-gray-700">Launched my personal portfolio and actively working on real-world tools using
+                    Git, Supabase, and microcontrollers.</p>
+            </div>
 
-          closeBtn.addEventListener('click', () => {
-            sidebar.classList.add('hidden');
-          });
+        </div>
+    </section>
 
-          sidebar.addEventListener('click', (e) => {
-            if (e.target === sidebar) sidebar.classList.add('hidden');
-          });
-        }
-      });
-  });
-</script>
+
+    <!-- Footer -->
+    <footer class="bg-blue-900 text-white text-center py-6 mt-12">
+        © 2025 Jason Gill. All rights reserved.
+    </footer>
+
+    <!-- Navbar Loader -->
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            fetch("navbar.html")
+                .then(res => res.text())
+                .then(html => {
+                    document.getElementById("navbar").innerHTML = html;
+                });
+        });
+    </script>
 
 </body>
+
 </html>

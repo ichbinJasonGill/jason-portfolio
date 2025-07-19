@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JasonScript | Projects | Jason Gill</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <style>
+        .swiper-button-next,
+        .swiper-button-prev {
+            color: #1d4ed8;
+        }
+
+        .swiper-pagination-bullet-active {
+            background-color: #1d4ed8;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-100 text-gray-800">
+
+    <!-- Reusable Navbar -->
+    <div id="navbar"></div>
+    
+
+    <!-- Hero Section -->
+    <section class="py-16 px-6 max-w-5xl mx-auto">
+        <h1 class="text-4xl font-bold text-blue-700 mb-4">JasonScript</h1>
+        <p class="text-lg text-gray-700 mb-6">
+            A scripting language developed as my semester project. JasonScript supports math operations, variables,
+            conditional statements, and more — all parsed and interpreted using C++.
+        </p>
+        <img src="../assets/Screenshot (7).png" alt="Project Cover"
+            class="rounded-xl shadow mb-10 w-full object-cover">
+    </section>
+
+    <!-- Image Slideshow -->
+    <section class="px-6 max-w-5xl mx-auto mb-12">
+        <div class="swiper mySwiper rounded-xl shadow-lg overflow-hidden">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="../assets/Screenshot (4).png" class="w-full" />
+                </div>
+                <div class="swiper-slide">
+                    <img src="../assets/Screenshot (5).png" class="w-full" />
+                </div>
+                <div class="swiper-slide">
+                    <img src="../assets/Screenshot (6).png" class="w-full" />
+                </div>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </section>
+
+    <!-- Info Section -->
+    <section class="px-6 max-w-5xl mx-auto mb-12">
+        <h2 class="text-2xl font-semibold text-blue-700 mb-4">What I Built</h2>
+        <ul class="list-disc pl-5 space-y-2 text-gray-700">
+            <li>Custom tokenizer and parser written in C++</li>
+            <li>Supports math, variables, if-else, and output</li>
+            <li>AST-based interpreter with error handling</li>
+            <li>Built as part of semester coursework</li>
+        </ul>
+    </section>
+
+    <section class="px-6 max-w-5xl mx-auto mb-12">
+        <h2 class="text-2xl font-semibold text-blue-700 mb-4">Instagram Preview</h2>
+        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/CjWDeU-DmvT/"
+            data-instgrm-version="14" style="width:100%; max-width: 540px; margin: 0 auto;">
+        </blockquote>
+    </section>
+
+
+
+
+    <!-- Links Section -->
+    <section class="px-6 max-w-5xl mx-auto mb-16">
+        <h2 class="text-2xl font-semibold text-blue-700 mb-4">Explore More</h2>
+        <div class="flex flex-wrap gap-4">
+            <a href="https://your-live-site.netlify.app" target="_blank"
+                class="bg-blue-600 text-white px-5 py-3 rounded hover:bg-blue-700 transition">
+                🔗 Live Demo
+            </a>
+            <a href="https://github.com/yourhandle/jasonscript" target="_blank"
+                class="bg-gray-800 text-white px-5 py-3 rounded hover:bg-gray-900 transition">
+                📁 GitHub Repo
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-blue-900 text-white text-center py-6">
+        © 2025 Jason Gill. All rights reserved.
+    </footer>
+
+
+    <!-- Instagram Embed Script -->
+    <script async src="//www.instagram.com/embed.js"></script>
+
+    <!-- Navbar Loader -->
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            fetch('navbar.html')
+                .then(res => res.text())
+                .then(html => {
+                    document.getElementById('navbar').innerHTML = html;
+
+                    // Now the navbar is injected, attach event listeners
+                    const toggleBtn = document.getElementById('menu-toggle');
+                    const sidebar = document.getElementById('sidebar');
+                    const closeBtn = document.getElementById('close-sidebar');
+
+                    if (toggleBtn && sidebar && closeBtn) {
+                        toggleBtn.addEventListener('click', () => {
+                            sidebar.classList.remove('hidden');
+                        });
+
+                        closeBtn.addEventListener('click', () => {
+                            sidebar.classList.add('hidden');
+                        });
+
+                        sidebar.addEventListener('click', (e) => {
+                            if (e.target === sidebar) sidebar.classList.add('hidden');
+                        });
+                    }
+                });
+        });
+    </script>
+
+    <!-- Swiper Script -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script>
+        new Swiper(".mySwiper", {
+            loop: true,
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev"
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true
+            }
+        });
+    </script>
+</body>
+
+</html>
